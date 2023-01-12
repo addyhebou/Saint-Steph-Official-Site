@@ -1,0 +1,34 @@
+.Navbar {
+  h1 {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    /* identical to box height, or 28px */
+
+    letter-spacing: -0.07em;
+    text-transform: capitalize;
+
+    color: #000000;
+    grid-area: 'title';
+    grid-column: 3/6;
+    margin: 0;
+  }
+  display: grid;
+  grid-template-columns: 7;
+  grid-template-areas: '. title menuIcon';
+  justify-items: center;
+  align-items: center;
+  background: #ad9db8;
+  padding: 8px;
+
+  .menuIcon {
+    grid-area: 'menuIcon';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    grid-column: 6/7;
+  }
+}
