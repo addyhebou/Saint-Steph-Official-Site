@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Saint-Steph-Official-Site/static/css/main.7216555c.css",
+    "main.js": "/Saint-Steph-Official-Site/static/js/main.e07e1dd2.js",
+    "static/js/787.cda612ba.chunk.js": "/Saint-Steph-Official-Site/static/js/787.cda612ba.chunk.js",
+    "index.html": "/Saint-Steph-Official-Site/index.html",
+    "main.7216555c.css.map": "/Saint-Steph-Official-Site/static/css/main.7216555c.css.map",
+    "main.e07e1dd2.js.map": "/Saint-Steph-Official-Site/static/js/main.e07e1dd2.js.map",
+    "787.cda612ba.chunk.js.map": "/Saint-Steph-Official-Site/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7216555c.css",
+    "static/js/main.e07e1dd2.js"
+  ]
+}
