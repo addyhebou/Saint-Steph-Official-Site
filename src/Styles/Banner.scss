@@ -2,11 +2,11 @@
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.375);
+  overflow: hidden;
   align-items: flex-start;
   .BannerImage {
     width: 100%;
     min-width: 700px;
-    position: absolute;
-    z-index: -1;
   }
 }
