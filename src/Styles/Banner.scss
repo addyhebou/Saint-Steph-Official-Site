@@ -1,0 +1,12 @@
+.Banner {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  .BannerImage {
+    width: 100%;
+    min-width: 700px;
+    position: absolute;
+    z-index: -1;
+  }
+}

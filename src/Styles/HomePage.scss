@@ -1,0 +1,13 @@
+.HomePage {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+
+  .Navbar {
+    flex: 0 1 auto;
+  }
+
+  .Banner {
+    flex: 1 1 auto;
+  }
+}
