@@ -1,5 +1,6 @@
 import React from 'react';
 import { SAINT_STEPH_SOCIALS, Social } from '../Constants/Socials';
+import '../Styles/Socials.scss';
 
 export default function Socials() {
   return (

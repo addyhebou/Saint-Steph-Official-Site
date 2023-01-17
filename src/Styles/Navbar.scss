@@ -56,15 +56,6 @@
       display: none;
     }
 
-    .Socials {
-      display: flex;
-      grid-area: 'socials';
-      grid-column: 9/9;
-      gap: 1em;
-      .SocialIcon {
-        height: 2em;
-      }
-    }
     .MenuItem:hover,
     .SocialIcon:hover {
       opacity: 0.5;

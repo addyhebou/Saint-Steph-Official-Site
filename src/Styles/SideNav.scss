@@ -8,7 +8,7 @@
     background-color: #ad9db8;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    padding-top: 2em;
     .SideNavMenu {
       display: flex;
       flex-direction: column;
@@ -16,7 +16,7 @@
       padding: 0px;
       gap: 17px;
       list-style: none;
-      margin: 3em 1.5em;
+      margin: 5em 1.5em;
       .SideNavItem {
         font-family: 'Helvetica';
         font-style: normal;
