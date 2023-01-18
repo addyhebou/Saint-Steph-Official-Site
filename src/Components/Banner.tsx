@@ -1,7 +1,6 @@
 import { SAINT_STEPH_SOCIALS, Social } from '../Constants/Socials';
 import '../Styles/Banner.scss';
 import HeaderWithBtn from './HeaderWithBtn';
-import Socials from './Socials';
 export default function Banner({ dimmed }: { dimmed: boolean }) {
   const dimStyles = dimmed ? 'rgba(0,0,0,.5)' : '';
 
@@ -10,7 +9,6 @@ export default function Banner({ dimmed }: { dimmed: boolean }) {
 
   return (
     <div className="Banner" style={{ backgroundColor: dimStyles }}>
-      <img className="BannerImage" src={url} alt="Saint Steph in the studio" />
       <HeaderWithBtn
         title={'Saint Steph'}
         buttonText={'Listen Now'}

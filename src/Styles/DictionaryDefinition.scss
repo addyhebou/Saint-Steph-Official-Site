@@ -1,0 +1,74 @@
+.DictionaryDefintion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1em;
+  margin: 0 auto;
+  background: transparent;
+  .phonetic {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 100%;
+    /* identical to box height, or 36px */
+
+    letter-spacing: -0.07em;
+    text-transform: lowercase;
+
+    color: #ffffff;
+    margin: 10px 0px;
+  }
+
+  .subtitle {
+    display: flex;
+    gap: 10px;
+    h2 {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 100%;
+      /* or 13px */
+
+      letter-spacing: -0.07em;
+      text-transform: lowercase;
+
+      color: #ffffff;
+    }
+    .article {
+      font-weight: 700;
+    }
+  }
+
+  .definition {
+    font-style: italic;
+    li {
+      text-align: left;
+    }
+  }
+
+  .synonyms {
+    color: white;
+    font-size: 13px;
+    font-family: 'Helvetica';
+    font-weight: 300;
+  }
+
+  .definition,
+  synonyms {
+    font-family: 'Helvetica';
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 100%;
+    /* or 13px */
+
+    letter-spacing: -0.07em;
+
+    color: #ffffff;
+  }
+
+  .synonyms > span {
+    font-weight: 700;
+  }
+}

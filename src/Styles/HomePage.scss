@@ -1,13 +1,10 @@
 .HomePage {
   display: flex;
   flex-flow: column;
-  height: 100vh;
+  // height: 100vh;
+  background: linear-gradient(180deg, #000000 0%, #28163c 100%);
 
   .Navbar {
     flex: 0 1 auto;
-  }
-
-  .Banner {
-    flex: 1 1 auto;
   }
 }

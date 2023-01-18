@@ -2,12 +2,9 @@
   .HeaderWithBtn {
     .SiteTitle {
       font-size: 3em;
-      bottom: 50%;
     }
     .SiteButton {
       font-size: 1em;
-      padding: 5px 0px;
-      bottom: 50%;
     }
   }
 }
@@ -15,22 +12,25 @@
   .HeaderWithBtn {
     .SiteTitle {
       font-size: 7.5em;
-      bottom: 15%;
     }
     .SiteButton {
       font-size: 2em;
-      padding: 10px 40px;
-      bottom: 15%;
     }
   }
 }
 
 // General Rules
 .HeaderWithBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin-bottom: 4em;
   .SiteTitle {
-    position: absolute;
-    left: 0;
-    right: 0;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
 
     font-family: 'Helvetica';
     font-style: normal;
@@ -42,13 +42,15 @@
     letter-spacing: -0.07em;
     text-transform: capitalize;
     color: white;
+    margin: 0 auto;
   }
   .SiteButton {
-    position: absolute;
-    left: 0;
-    right: 0;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
 
     width: 200px;
+    padding: 10px 40px;
 
     margin: 0 auto;
     background: #af9db0;
