@@ -5,7 +5,7 @@ export const PAGES: PageLink[] = [
   },
   {
     name: 'about',
-    link: 'https://open.spotify.com/playlist/3BEcw7WkLRmutsBUqZsHQ4?si=184a965ff9354756&nd=1',
+    link: '',
   },
   {
     name: 'booking',

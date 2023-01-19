@@ -6,15 +6,28 @@ import SideNav from '../Components/SideNav';
 import { BiographyText } from '../Constants/Biography';
 import { SUPERPRODUCER_DEFINITION } from '../Constants/Definition';
 import '../Styles/HomePage.scss';
-import { useState, useEffect } from 'react';
+import { useState, useRef } from 'react';
 
 export default function HomePage() {
   const [sidenavOpen, setSidenavOpen] = useState<boolean>(false);
+  const myRef = useRef(null);
+  const executeScroll = () => {
+    if (!myRef || !myRef.current) return;
+    return (myRef.current as any).scrollIntoView();
+  };
   return (
     <div className="HomePage">
-      <Navbar turnOnSideNav={setSidenavOpen} dimmed={sidenavOpen} />
+      <Navbar
+        turnOnSideNav={setSidenavOpen}
+        dimmed={sidenavOpen}
+        scroll={executeScroll}
+      />
       <Banner dimmed={sidenavOpen} />
-      <SideNav isOpen={sidenavOpen} setIsOpen={setSidenavOpen} />
+      <SideNav
+        isOpen={sidenavOpen}
+        setIsOpen={setSidenavOpen}
+        scroll={executeScroll}
+      />
       <DictionaryDefinition
         name={SUPERPRODUCER_DEFINITION.name}
         phonetic={SUPERPRODUCER_DEFINITION.phonetic}
@@ -23,7 +36,9 @@ export default function HomePage() {
         definitions={SUPERPRODUCER_DEFINITION.definitions}
         synonyms={SUPERPRODUCER_DEFINITION.synonyms}
       />
-      <Biography text={BiographyText} />
+      <div ref={myRef}>
+        <Biography text={BiographyText} />
+      </div>
     </div>
   );
 }
