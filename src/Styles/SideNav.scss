@@ -1,3 +1,4 @@
+$url: '../media/background.png';
 @media only screen and (max-width: 768px) {
   .SideNav {
     position: fixed;
@@ -5,7 +6,8 @@
     height: 100vh;
     overflow-x: hidden;
     width: 90vw;
-    background-color: #ad9db8;
+    background-image: url($url); /* W3C */
+    background-repeat: repeat;
     display: flex;
     flex-direction: column;
     padding-top: 2em;
@@ -28,7 +30,7 @@
         text-transform: capitalize;
         text-decoration: none;
 
-        color: #000000;
+        color: #fff;
       }
     }
   }

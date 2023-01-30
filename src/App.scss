@@ -1,5 +1,9 @@
+$url: './media/background.png';
+
 .App {
+  background-image: url($url); /* W3C */
   text-align: center;
+  background-repeat: repeat;
 }
 
 .App-logo {

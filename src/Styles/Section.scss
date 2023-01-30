@@ -1,0 +1,19 @@
+.Section {
+  color: white;
+  padding: 20px;
+  li,
+  p {
+    text-align: left;
+  }
+  h1 {
+    font-family: 'Bebas Neue Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+}

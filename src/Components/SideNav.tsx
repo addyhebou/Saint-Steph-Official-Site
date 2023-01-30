@@ -18,10 +18,13 @@ export default function SideNav({
 
   return (
     <div className="SideNav" style={{ width: openStyles }}>
-      <Close sx={{ fontSize: '3em' }} onClick={() => setIsOpen(false)} />
+      <Close
+        sx={{ fontSize: '3em', color: 'white' }}
+        onClick={() => setIsOpen(false)}
+      />
       <ul className="SideNavMenu">
         {PAGES.map((page: PageLink) => {
-          return page.name === 'about' ? (
+          return (
             <p
               className="SideNavItem"
               style={{ margin: '0em' }}
@@ -30,17 +33,8 @@ export default function SideNav({
                 setIsOpen(false);
               }}
             >
-              About
-            </p>
-          ) : (
-            <a
-              className="SideNavItem"
-              href={page.link}
-              target={'_blank'}
-              referrerPolicy="no-referrer"
-            >
               {page.name}
-            </a>
+            </p>
           );
         })}
       </ul>

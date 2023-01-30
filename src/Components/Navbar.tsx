@@ -19,25 +19,16 @@ export default function Navbar({
     <div className="Navbar" style={{ backgroundColor: dimStyles }}>
       <ul className="MenuItems">
         {PAGES.map((page: PageLink) => {
-          return page.name === 'about' ? (
+          return (
             <p className="MenuItem" onClick={scroll}>
-              About
-            </p>
-          ) : (
-            <a
-              className="MenuItem"
-              href={page.link}
-              target={'_blank'}
-              referrerPolicy="no-referrer"
-            >
               {page.name}
-            </a>
+            </p>
           );
         })}
       </ul>
-      <h1 className="SaintStephHeader">Saint Steph</h1>
+      <h1 className="SaintStephHeader">My Intern Proposal</h1>
       <div className="menuIcon" onClick={() => turnOnSideNav(true)}>
-        <MenuIcon sx={{ fontSize: '2em' }} />
+        <MenuIcon sx={{ fontSize: '2em', color: 'white' }} />
       </div>
       <Socials />
     </div>
