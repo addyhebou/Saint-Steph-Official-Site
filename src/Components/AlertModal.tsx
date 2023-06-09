@@ -29,7 +29,6 @@ interface Props {
   open: boolean;
   handleClose: () => void;
   type?: ModalType;
-  releaseInformation?: NewRelease[];
   title?: string;
   description?: React.ReactNode;
   buttons?: Button[];
@@ -37,7 +36,6 @@ interface Props {
 }
 
 export const AlertModal = ({
-  releaseInformation,
   open,
   handleClose,
   type = ModalTypes.STANDARD,
@@ -59,14 +57,6 @@ export const AlertModal = ({
     window.open(redirectURL, '_blank');
   };
 
-  const release = releaseInformation?.[step];
-
-  const decrementStep = () => step > 0 && setStep(step - 1);
-  const advanceStep = () =>
-    releaseInformation &&
-    step < releaseInformation.length - 1 &&
-    setStep(step + 1);
-
   const getModalTitle = (type: ModalType) => {
     switch (type) {
       case ModalTypes.NEWS_ALERT:
@@ -81,7 +71,7 @@ export const AlertModal = ({
   };
 
   useEffect(() => {
-    getAverageColor(artworkURL ?? release?.artworkURL)
+    getAverageColor(artworkURL)
       .then((color) => {
         setAverageBackgroundColor([
           rgbToHex(adjustBrightness(color, 0.2)),
@@ -107,29 +97,12 @@ export const AlertModal = ({
             }}
           >
             <h1 className={modalTitleClassname}>{getModalTitle(type)}</h1>
-            {type === ModalTypes.NEWS_ALERT && (
-              <div onClick={decrementStep}>
-                <ArrowBackIosIcon
-                  fontSize="large"
-                  sx={{
-                    color: 'white',
-                    visibility: !!step ? 'visible' : 'hidden',
-                    '&:hover': {
-                      cursor: 'pointer',
-                    },
-                  }}
-                />
-              </div>
-            )}
             <div className="contentAndFooter">
               <div className="content">
-                <img
-                  src={release?.artworkURL ?? artworkURL}
-                  alt={'Artwork for release information'}
-                />
+                <img src={artworkURL} alt={'Artwork for release information'} />
                 <div className="textContent">
-                  <h1>{release?.title ?? title}</h1>
-                  <p>{release?.description ?? description}</p>
+                  <h1>{title}</h1>
+                  <p>{description}</p>
                 </div>
               </div>
               <div className="footer">
@@ -143,24 +116,6 @@ export const AlertModal = ({
                 ))}
               </div>
             </div>
-            {type === ModalTypes.NEWS_ALERT && releaseInformation && (
-              <div onClick={advanceStep}>
-                <ArrowForwardIosIcon
-                  fontSize="large"
-                  sx={{
-                    color: 'white',
-                    visibility:
-                      !!releaseInformation.length &&
-                      step < releaseInformation.length - 1
-                        ? 'visible'
-                        : 'hidden',
-                    '&:hover': {
-                      cursor: 'pointer',
-                    },
-                  }}
-                />
-              </div>
-            )}
           </Box>
         </Fade>
       </Modal>
