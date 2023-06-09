@@ -8,7 +8,7 @@ import {
   styled,
 } from '@mui/material';
 import React, { useEffect } from 'react';
-import { ModalType, ModalTypes, NewRelease } from '../Constants/types';
+import { ModalType, ModalTypes } from '../Constants/types';
 import {
   AlertModalModalStyles,
   modalTitleClassname,
