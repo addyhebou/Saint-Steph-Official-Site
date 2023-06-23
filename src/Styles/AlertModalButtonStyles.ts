@@ -5,7 +5,7 @@ export const AlertModalButtonStyles = css({
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'flexStart',
-  paddingBlock: '18px',
+  paddingBlock: 'min(18px)',
   paddingInline: 'min(1vw, 45px)',
   gap: ' 10px',
 
@@ -21,7 +21,7 @@ export const AlertModalButtonStyles = css({
   fontFamily: 'Inter',
   fontStyle: 'normal',
   fontWeight: '700',
-  fontSize: 'min(6vw, 1.125em)',
+  fontSize: 'min(6vw, 1em)',
   letterSpacing: '0.095em',
   textTransform: 'uppercase',
   color: Colors.WHITE,
