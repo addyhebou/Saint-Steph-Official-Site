@@ -10,7 +10,7 @@ export const AlertModalButtonStyles = css({
   gap: ' 10px',
 
   width: 'min(75vw, 254px)',
-  height: '60px',
+  height: 'min(1vw, 60px)',
 
   marginBlock: '1em',
 
