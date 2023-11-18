@@ -9,7 +9,7 @@ export const PAGES: PageLink[] = [
   },
   {
     name: 'booking',
-    link: 'https://beat-shop-client-frontend.web.app/',
+    link: 'https://www.fiverr.com/s/PN9xA0',
   },
   {
     name: 'contact',

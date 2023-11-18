@@ -46,7 +46,7 @@ export default function HomePage() {
           },
           {
             text: 'Book A Collab Now',
-            URL: 'https://beat-shop-client-frontend.web.app/',
+            URL: 'https://www.fiverr.com/s/PN9xA0',
           },
           {
             text: 'Grab Beats',
