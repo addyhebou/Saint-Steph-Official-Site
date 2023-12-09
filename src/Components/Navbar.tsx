@@ -1,6 +1,5 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import '../Styles/Navbar.scss';
-import { SAINT_STEPH_SOCIALS, Social } from '../Constants/Socials';
 import { PAGES, PageLink } from '../Constants/Pages';
 import Socials from './Socials';
 
@@ -28,7 +27,7 @@ export default function Navbar({
               className="MenuItem"
               href={page.link}
               target={'_blank'}
-              referrerPolicy="no-referrer"
+              rel="noreferrer"
             >
               {page.name}
             </a>

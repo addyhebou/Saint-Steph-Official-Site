@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Styles/SideNav.scss';
 import { PAGES, PageLink } from '../Constants/Pages';
-import { SAINT_STEPH_SOCIALS, Social } from '../Constants/Socials';
 import Socials from './Socials';
 import { Close } from '@mui/icons-material';
 
@@ -37,7 +36,7 @@ export default function SideNav({
               className="SideNavItem"
               href={page.link}
               target={'_blank'}
-              referrerPolicy="no-referrer"
+              rel="noreferrer"
             >
               {page.name}
             </a>

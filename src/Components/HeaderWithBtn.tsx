@@ -12,12 +12,7 @@ export default function HeaderWithBtn({
   return (
     <div className="HeaderWithBtn">
       <h1 className="SiteTitle">{title}</h1>
-      <a
-        className="SiteButton"
-        href={link}
-        target={'_blank'}
-        referrerPolicy="no-referrer"
-      >
+      <a className="SiteButton" href={link} target={'_blank'} rel="noreferrer">
         {buttonText}
       </a>
     </div>

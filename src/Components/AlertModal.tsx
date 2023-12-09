@@ -13,14 +13,12 @@ import {
   AlertModalModalStyles,
   modalTitleClassname,
 } from '../Styles/AlertModalStyles';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useState } from 'react';
 import { AlertModalButtonStyles } from '../Styles/AlertModalButtonStyles';
 import { Gradients } from '../Styles/variables';
 import { adjustBrightness, getAverageColor } from '../Utils/getAverageColor';
 
-interface Button {
+interface ButtonType {
   text: string;
   URL: string;
 }
@@ -31,7 +29,7 @@ interface Props {
   type?: ModalType;
   title?: string;
   description?: React.ReactNode;
-  buttons?: Button[];
+  buttons?: ButtonType[];
   artworkURL: string;
 }
 
@@ -44,7 +42,7 @@ export const AlertModal = ({
   buttons,
   artworkURL,
 }: Props) => {
-  const [step, setStep] = useState(0);
+  const step = 0;
   const [averageBackgroundColor, setAverageBackgroundColor] = useState<
     string[]
   >([]);
@@ -81,7 +79,7 @@ export const AlertModal = ({
       .catch((error) => {
         console.error(error);
       });
-  }, [open, step]);
+  }, [open, step, artworkURL]);
 
   return (
     <div>

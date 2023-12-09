@@ -12,6 +12,10 @@ export const PAGES: PageLink[] = [
     link: 'https://www.fiverr.com/s/PN9xA0',
   },
   {
+    name: 'Portfolio',
+    link: '',
+  },
+  {
     name: 'contact',
     link: 'mailto:hi@saintstephmusic.com',
   },
