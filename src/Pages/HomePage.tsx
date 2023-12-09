@@ -2,24 +2,21 @@ import { AlertModal } from '../Components/AlertModal';
 import Banner from '../Components/Banner';
 import Biography from '../Components/Biography';
 import DictionaryDefinition from '../Components/DictionaryDefinition';
-import Navbar from '../Components/Navbar';
-import SideNav from '../Components/SideNav';
 import { BiographyText } from '../Constants/Biography';
 import { SUPERPRODUCER_DEFINITION } from '../Constants/Definition';
 import { ModalTypes } from '../Constants/types';
 import '../Styles/HomePage.scss';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-export default function HomePage() {
-  const [sidenavOpen, setSidenavOpen] = useState<boolean>(false);
+interface Props {
+  ref: React.MutableRefObject<null>;
+  sidenavOpen: boolean;
+}
+
+export default function HomePage({ ref, sidenavOpen }: Props) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const myRef = useRef(null);
-  const executeScroll = () => {
-    if (!myRef || !myRef.current) return;
-    return (myRef.current as any).scrollIntoView();
-  };
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       handleOpen();
@@ -55,17 +52,7 @@ export default function HomePage() {
         ]}
         type={ModalTypes.RECORD}
       />
-      <Navbar
-        turnOnSideNav={setSidenavOpen}
-        dimmed={sidenavOpen}
-        scroll={executeScroll}
-      />
       <Banner dimmed={sidenavOpen} />
-      <SideNav
-        isOpen={sidenavOpen}
-        setIsOpen={setSidenavOpen}
-        scroll={executeScroll}
-      />
       <DictionaryDefinition
         name={SUPERPRODUCER_DEFINITION.name}
         phonetic={SUPERPRODUCER_DEFINITION.phonetic}
@@ -74,7 +61,7 @@ export default function HomePage() {
         definitions={SUPERPRODUCER_DEFINITION.definitions}
         synonyms={SUPERPRODUCER_DEFINITION.synonyms}
       />
-      <div ref={myRef}>
+      <div ref={ref}>
         <Biography text={BiographyText} />
       </div>
     </div>

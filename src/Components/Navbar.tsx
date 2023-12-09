@@ -26,7 +26,7 @@ export default function Navbar({
             <a
               className="MenuItem"
               href={page.link}
-              target={'_blank'}
+              target={page.name !== 'portfolio' ? '_blank' : ''}
               rel="noreferrer"
             >
               {page.name}
