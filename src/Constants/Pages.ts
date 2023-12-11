@@ -11,10 +11,11 @@ export const PAGES: PageLink[] = [
     name: 'booking',
     link: 'https://www.fiverr.com/s/PN9xA0',
   },
-  {
-    name: 'portfolio',
-    link: '/portfolio',
-  },
+  // TODO: Unblock this once portfolio page is done
+  // {
+  //   name: 'portfolio',
+  //   link: '/portfolio',
+  // },
   {
     name: 'contact',
     link: 'mailto:hi@saintstephmusic.com',
