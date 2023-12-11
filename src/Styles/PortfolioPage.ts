@@ -4,7 +4,6 @@ export const portfolioPageBackgroundClassname = css({
   background: 'linear-gradient(180deg, #000000 0%, #28163c 100%)',
   display: 'flex',
   flexFlow: 'column',
-  height: '100vh',
 
   '& .pageHeader': {
     color: '#FFF',

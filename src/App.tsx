@@ -31,6 +31,7 @@ function App() {
           element={<HomePage ref={myRef} sidenavOpen={sidenavOpen} />}
         />
         <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/portfolio/:category" element={<PortfolioPage />} />
       </Routes>
     </div>
   );
