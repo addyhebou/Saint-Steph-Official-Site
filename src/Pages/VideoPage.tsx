@@ -8,7 +8,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import { PORTFOLIO_CATEGORY_CARDS } from '../Constants/PortfolioCategoryCards';
 import { Popover, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { Category, PORTFOLIO_VIDEOS } from '../Constants/PortfolioVideos';
+import { PORTFOLIO_VIDEOS } from '../Constants/PortfolioVideos';
 
 type Video = {
   name: string;
@@ -165,8 +165,9 @@ const FooterDock = () => {
   );
 };
 
-export default function VideoPage({ category }: { category: Category }) {
-  const getFirstVideo = (category: Category) =>
+export default function VideoPage({ category }: { category: string }) {
+  console.log({ category });
+  const getFirstVideo = (category: string) =>
     PORTFOLIO_VIDEOS.find((video) => video.category === category);
   const [currentVideo, setCurrentVideo] = useState<Video | undefined>(
     getFirstVideo(category)

@@ -9,7 +9,6 @@ import {
 } from '../Constants/PortfolioCategoryCards';
 import { useNavigate, useParams } from 'react-router-dom';
 import VideoPage from './VideoPage';
-import { Category } from '../Constants/PortfolioVideos';
 
 const PortfolioCategoryCard = ({
   title,
@@ -46,7 +45,7 @@ export default function PortfolioPage() {
     <div className={portfolioPageBackgroundClassname}>
       <h1 className={'pageHeader'}>{getHeaderTitle()}</h1>
       {category ? (
-        <VideoPage category={category as Category} />
+        <VideoPage category={category as string} />
       ) : (
         <div
           style={{
